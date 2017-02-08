@@ -60,13 +60,13 @@ echo ""
 
 
 # Diagnostic 5
-$java --add-modules java.xml.bind \
-      --add-opens java.base/java.nio=ALL-UNNAMED \
-      --add-opens java.base/sun.nio.ch=ALL-UNNAMED \
-      --add-exports java.base/sun.net.dns=ALL-UNNAMED \
-      -classpath target:deps/vertx-core-3.3.3.jar:deps/vertx-web-3.3.3.jar:deps/vertx-internal-3.3.3.jar \
-      io.snowcamp.papaya.web.ExampleApp
+#$java --add-modules java.xml.bind \
+#      --add-opens java.base/java.nio=ALL-UNNAMED \
+#      --add-opens java.base/sun.nio.ch=ALL-UNNAMED \
+#      --add-exports java.base/sun.net.dns=ALL-UNNAMED \
+#      -classpath target:deps/vertx-core-3.3.3.jar:deps/vertx-web-3.3.3.jar:deps/vertx-internal-3.3.3.jar \
+#      io.snowcamp.papaya.web.ExampleApp
 
 
-#$java -classpath target:deps/json-20160810.jar:deps/junit-4.12.jar:deps/hamcrest-core-1.3.jar \
-#      org.junit.runner.JUnitCore io.snowcamp.papaya.test.TestSuite
+$java -classpath target:deps/json-20160810.jar:deps/junit-4.12.jar:deps/hamcrest-core-1.3.jar \
+      org.junit.runner.JUnitCore io.snowcamp.papaya.test.TestSuite

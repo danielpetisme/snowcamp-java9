@@ -3,7 +3,8 @@ package io.snowcamp.papaya.doc;
 import java.io.IOException;
 import java.io.UncheckedIOException;
 //import java.nio.charset.StandardCharsets;
-//import java.util.Base64;
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
 import java.util.Map;
 import java.util.Optional;
 import java.util.OptionalDouble;
@@ -27,25 +28,25 @@ public interface Document extends Map<String, Object> {
     return get(key, Double.class).map(OptionalDouble::of).orElseGet(OptionalDouble::empty);
   }
   
-  default void putBlob(String key, byte[] blob) {
-    put(key, new sun.misc.BASE64Encoder().encode(blob));
-  }
-  default Optional<byte[]> getBlob(String key) {
-    return get(key, String.class).map(base64 -> {
-      try {
-        return new sun.misc.BASE64Decoder().decodeBuffer(base64);
-      } catch (IOException e) {
-        throw new UncheckedIOException(e);
-      }
-    });
-  }
+//  default void putBlob(String key, byte[] blob) {
+//    put(key, new sun.misc.BASE64Encoder().encode(blob));
+//  }
+//  default Optional<byte[]> getBlob(String key) {
+//    return get(key, String.class).map(base64 -> {
+//      try {
+//        return new sun.misc.BASE64Decoder().decodeBuffer(base64);
+//      } catch (IOException e) {
+//        throw new UncheckedIOException(e);
+//      }
+//    });
+//  }
   
-  /*
+
   default void putBlob(String key, byte[] blob) {
     put(key, new String(Base64.getEncoder().encode(blob), StandardCharsets.ISO_8859_1));
   }
   default Optional<byte[]> getBlob(String key) {
     return get(key, String.class).map(base64 -> Base64.getDecoder().decode(base64));
   }
-  */
+
 }
