@@ -1,4 +1,4 @@
-module papaya {
+open module papaya {
     // automatic modules
     requires junit;
 
