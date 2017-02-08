@@ -19,7 +19,16 @@ echo ""
 #$java --module-path target/test/artifact:target/main/artifact:deps  \
 #      -m papaya/io.snowcamp.papaya.test.Run
 
-#Diagnostic 1
-$java --module-path target/test/artifact:target/main/artifact:deps  \
-      -classpath deps/hamcrest-core-1.3.jar    \
-      -m papaya/io.snowcamp.papaya.test.Run
+
+#$java --module-path target/test/artifact:target/main/artifact:deps  \
+#      -classpath deps/hamcrest-core-1.3.jar    \
+#      -m papaya/io.snowcamp.papaya.test.Run
+
+$java -Dsun.reflect.debugModuleAccessChecks=true \
+    --add-opens java.base/java.nio=ALL-UNNAMED \
+    --add-opens java.base/sun.nio.ch=ALL-UNNAMED \
+    --add-exports java.base/sun.net.dns=ALL-UNNAMED \
+    --add-exports java.base/jdk.internal.ref=ALL-UNNAMED \
+    --module-path target/main/artifact:deps \
+    -classpath target:deps/vertx-core-3.3.3.jar:deps/vertx-web-3.3.3.jar:deps/vertx-internal-3.3.3.jar \
+    -m papaya.web/io.snowcamp.papaya.web.ExampleApp

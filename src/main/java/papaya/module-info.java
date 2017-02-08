@@ -4,8 +4,6 @@ module papaya {
     requires java.xml.bind;
     // automatic modules
     requires json;
-    requires vertx.core;
-    requires vertx.web;
 
     requires papaya.doc;
     requires papaya.reflect;
@@ -13,4 +11,5 @@ module papaya {
     exports io.snowcamp.papaya.spi;
     exports io.snowcamp.papaya.api;
         // io.snowcamp.papaya.inmemory is not exported
+    uses io.snowcamp.papaya.api.DBFactory;
 }
