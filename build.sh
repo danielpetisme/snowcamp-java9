@@ -1,6 +1,6 @@
 #!/bin/bash
-export JAVA8_HOME=/usr/jdk/jdk-8
-export JAVA9_HOME=/usr/jdk/jdk-9
+export JAVA8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home
+export JAVA9_HOME=/Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home
 export java=$JAVA8_HOME/bin/java
 export javac=$JAVA8_HOME/bin/javac
 
