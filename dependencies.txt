@@ -1,0 +1,62 @@
+target -> java.base
+target -> java.xml.bind
+target -> jdk.unsupported
+target -> not found
+   io.snowcamp.papaya.api                             -> io.snowcamp.papaya.doc                             target
+   io.snowcamp.papaya.api                             -> java.lang                                          java.base
+   io.snowcamp.papaya.api                             -> java.util.stream                                   java.base
+   io.snowcamp.papaya.doc                             -> java.lang                                          java.base
+   io.snowcamp.papaya.doc                             -> java.lang.invoke                                   java.base
+   io.snowcamp.papaya.doc                             -> java.nio.charset                                   java.base
+   io.snowcamp.papaya.doc                             -> java.util                                          java.base
+   io.snowcamp.papaya.doc                             -> java.util.function                                 java.base
+   io.snowcamp.papaya.inmemory                        -> io.snowcamp.papaya.api                             target
+   io.snowcamp.papaya.inmemory                        -> io.snowcamp.papaya.doc                             target
+   io.snowcamp.papaya.inmemory                        -> io.snowcamp.papaya.reflect                         target
+   io.snowcamp.papaya.inmemory                        -> java.lang                                          java.base
+   io.snowcamp.papaya.inmemory                        -> java.lang.invoke                                   java.base
+   io.snowcamp.papaya.inmemory                        -> java.util                                          java.base
+   io.snowcamp.papaya.inmemory                        -> java.util.function                                 java.base
+   io.snowcamp.papaya.inmemory                        -> java.util.stream                                   java.base
+   io.snowcamp.papaya.inmemory                        -> org.json                                           not found
+   io.snowcamp.papaya.reflect                         -> io.snowcamp.papaya.doc                             target
+   io.snowcamp.papaya.reflect                         -> java.lang                                          java.base
+   io.snowcamp.papaya.reflect                         -> java.lang.invoke                                   java.base
+   io.snowcamp.papaya.reflect                         -> java.lang.reflect                                  java.base
+   io.snowcamp.papaya.reflect                         -> java.util                                          java.base
+   io.snowcamp.papaya.reflect                         -> java.util.function                                 java.base
+   io.snowcamp.papaya.reflect                         -> java.util.stream                                   java.base
+   io.snowcamp.papaya.reflect                         -> sun.misc                                           JDK internal API (jdk.unsupported)
+   io.snowcamp.papaya.spi                             -> io.snowcamp.papaya.api                             target
+   io.snowcamp.papaya.spi                             -> io.snowcamp.papaya.inmemory                        target
+   io.snowcamp.papaya.spi                             -> java.lang                                          java.base
+   io.snowcamp.papaya.spi                             -> java.lang.invoke                                   java.base
+   io.snowcamp.papaya.spi                             -> java.util.function                                 java.base
+   io.snowcamp.papaya.test                            -> io.snowcamp.papaya.api                             target
+   io.snowcamp.papaya.test                            -> io.snowcamp.papaya.doc                             target
+   io.snowcamp.papaya.test                            -> io.snowcamp.papaya.spi                             target
+   io.snowcamp.papaya.test                            -> java.io                                            java.base
+   io.snowcamp.papaya.test                            -> java.lang                                          java.base
+   io.snowcamp.papaya.test                            -> java.lang.invoke                                   java.base
+   io.snowcamp.papaya.test                            -> java.nio                                           java.base
+   io.snowcamp.papaya.test                            -> java.util                                          java.base
+   io.snowcamp.papaya.test                            -> java.util.function                                 java.base
+   io.snowcamp.papaya.test                            -> java.util.stream                                   java.base
+   io.snowcamp.papaya.test                            -> org.junit                                          not found
+   io.snowcamp.papaya.test                            -> org.junit.internal                                 not found
+   io.snowcamp.papaya.test                            -> org.junit.runner                                   not found
+   io.snowcamp.papaya.test                            -> org.junit.runner.notification                      not found
+   io.snowcamp.papaya.test                            -> org.junit.runners                                  not found
+   io.snowcamp.papaya.web                             -> io.vertx.core                                      not found
+   io.snowcamp.papaya.web                             -> io.vertx.core.http                                 not found
+   io.snowcamp.papaya.web                             -> io.vertx.core.json                                 not found
+   io.snowcamp.papaya.web                             -> io.vertx.ext.web                                   not found
+   io.snowcamp.papaya.web                             -> io.vertx.ext.web.handler                           not found
+   io.snowcamp.papaya.web                             -> java.io                                            java.base
+   io.snowcamp.papaya.web                             -> java.lang                                          java.base
+   io.snowcamp.papaya.web                             -> java.lang.invoke                                   java.base
+   io.snowcamp.papaya.web                             -> java.util                                          java.base
+   io.snowcamp.papaya.web                             -> java.util.function                                 java.base
+   io.snowcamp.papaya.web                             -> java.util.stream                                   java.base
+   io.snowcamp.papaya.web                             -> javax.xml.bind                                     java.xml.bind
+   io.snowcamp.papaya.web                             -> javax.xml.bind.annotation                          java.xml.bind

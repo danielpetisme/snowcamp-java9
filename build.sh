@@ -2,7 +2,7 @@
 export JAVA8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home
 export JAVA9_HOME=/Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home
 export java=$JAVA9_HOME/bin/java
-export javac=$JAVA8_HOME/bin/javac
+export javac=$JAVA9_HOME/bin/javac
 
 # Compile
 #   change this in part 2
@@ -14,16 +14,15 @@ echo "============================"
 echo "= Compiling src/main/java/ ="
 echo "============================"
 echo ""
-$javac -classpath deps/json-20160810.jar:deps/vertx-core-3.3.3.jar:deps/vertx-web-3.3.3.jar \
-       -XDignore.symbol.file \
-       -d target/ \
+javac --module-path deps \
+       -d target/         \
        $(find src/main/java/ -name "*.java")
 echo ""
 echo "============================"
 echo "= Compiling src/test/java/ ="
 echo "============================"
 echo ""
-$javac -classpath target:deps/json-20160810.jar:deps/junit-4.12.jar \
+$javac --module-path deps \
        -d target/ \
        $(find src/test/java/ -name "*.java")
 echo ""
