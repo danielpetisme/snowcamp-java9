@@ -1,8 +1,8 @@
 #!/bin/bash
-export JAVA9_HOME=/usr/jdk/jdk-9
+export JAVA9_HOME=/Library/Java/JavaVirtualMachines/jdk-9.jdk/Contents/Home
 export java=$JAVA9_HOME/bin/java
 
-export PRO_HOME=/usr/jdk/pro
+export PRO_HOME=/Users/daniel/workspace/snowcamp/java9/pro
 
 echo ""
 echo "============================"
@@ -18,3 +18,8 @@ echo ""
 
 #$java --module-path target/test/artifact:target/main/artifact:deps  \
 #      -m papaya/io.snowcamp.papaya.test.Run
+
+#Diagnostic 1
+$java --module-path target/test/artifact:target/main/artifact:deps  \
+      -classpath deps/hamcrest-core-1.3.jar    \
+      -m papaya/io.snowcamp.papaya.test.Run
